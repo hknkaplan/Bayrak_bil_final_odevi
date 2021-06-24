@@ -1,4 +1,5 @@
 import 'package:bayrak_bil/QuizEkrani.dart';
+import 'package:bayrak_bil/Tmenu.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -46,10 +47,22 @@ class _AnasayfaState extends State<Anasayfa> {
                   child:Row(
                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                      Image.asset("resimler/turkiye.png"),
-                      Image.asset("resimler/romanya.png"),
-                      Image.asset("resimler/almanya.png"),
-                      Image.asset("resimler/bosnahersek.png"),
+                      GestureDetector(onLongPress: (){
+                        ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("Türkiye",style: TextStyle(fontSize: 35),)));
+                      },
+                          child: Image.asset("resimler/turkiye.png")),
+                    GestureDetector(onLongPress: (){
+                      ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("Romanya",style: TextStyle(fontSize: 35),)));
+                    },
+                        child: Image.asset("resimler/romanya.png")),
+                    GestureDetector(onLongPress: (){
+                      ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("Almanya",style: TextStyle(fontSize: 35),)));
+                    },
+                        child: Image.asset("resimler/almanya.png")),
+                    GestureDetector(onLongPress: (){
+                      ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("Bosna Hersek",style: TextStyle(fontSize: 35),)));
+                    },
+                        child: Image.asset("resimler/bosnahersek.png")),
                     ],
                   ),
               ),
@@ -59,12 +72,24 @@ class _AnasayfaState extends State<Anasayfa> {
             Spacer(),
             SizedBox(width: 250, height: 50,
               child: RaisedButton(
+                color: Colors.blue,
                 child: Text("BAŞLA",style: TextStyle(fontSize: 25)),
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> QuizEkrani()));
                 },
               ),
             ),
+            Spacer(),
+            SizedBox(width: 250, height: 50,
+              child: RaisedButton(
+                color:Colors.red,
+                child: Text("TÜRKİYE",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color:Colors.white)),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Tmenu()));
+                },
+              ),
+            ),
+
             Spacer(),
             Padding(
               padding: const EdgeInsets.only(bottom: 5),
@@ -74,10 +99,22 @@ class _AnasayfaState extends State<Anasayfa> {
                 child:Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset("resimler/azerbaycan.png"),
-                    Image.asset("resimler/ispanya.png"),
-                    Image.asset("resimler/yunanistan.png"),
-                    Image.asset("resimler/slovakya.png"),
+                    GestureDetector(onLongPress: (){
+                        ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("Azerbaycan",style: TextStyle(fontSize: 35),)));
+                      },
+                        child: Image.asset("resimler/azerbaycan.png")),
+                    GestureDetector(onLongPress: (){
+                      ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("İspanya",style: TextStyle(fontSize: 35),)));
+                        },
+                        child: Image.asset("resimler/ispanya.png")),
+                    GestureDetector(onLongPress: (){
+                          ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("Yunanistan",style: TextStyle(fontSize: 35),)));
+                        },
+                        child: Image.asset("resimler/yunanistan.png")),
+                    GestureDetector(onLongPress: (){
+                          ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text("Slovakya",style: TextStyle(fontSize: 35),)));
+                        },
+                        child: Image.asset("resimler/slovakya.png")),
                   ],
                 ),
               ),
