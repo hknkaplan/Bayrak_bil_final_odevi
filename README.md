@@ -1,2 +1,2 @@
-# test_mobil
-MOBİL PROGRAMLAMA VİZE
+# Bayrak bil final
+MOBİL PROGRAMLAMA final
